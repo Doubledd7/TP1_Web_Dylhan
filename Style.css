@@ -1,59 +1,57 @@
-/* --- Base & Structure --- */
-html {
-  /* Assure que la couleur de fond couvre toute la hauteur du document */
-  background-color: #000000; 
+/* --- Structure de base --- */
+html,
+body {
+    background-color: #000000;
+    margin: 0;
 }
 
 body {
-  min-height: 100vh; /* Minimum 100% de la hauteur de l'écran */
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  /* On applique le noir ici aussi et on le fixe */
-  background: #000000 fixed; 
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    background: #000000 fixed;
 }
 
 main {
-  flex: 1; /* Pousse le footer vers le bas */
-  max-width: 950px; 
-  margin: 20px auto; 
-  padding: 30px;
-  background-color: #ff925300; /* On garde le main noir aussi */
-  border-radius: 8px;
-
+    flex: 1;
+    max-width: 950px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: transparent;
+    border-radius: 8px;
 }
 
-
-
-/* --- Navigation & Liens --- */
-a {
-  color: #ffd000; /* Bleu style YouTube pour une meilleure visibilité */
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* --- Haut et Bas de page --- */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;  
-  background: rgba(0,0,0,0.7);
-  padding: 10px 30px;
+header,
+footer {
+    padding: 10px 30px;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 footer {
-  text-align: center;
-  padding: 15px;
-  background: rgba(0,0,0,0.8);
-  font-size: 0.9em;
+    justify-content: center;
+    font-size: 0.9em;
+    background: rgba(0, 0, 0, 0.8);
 }
 
-/* -Album.html --- */
+/* --- Navigation & Liens --- */
+a,
+a:visited {
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #cccccc;
+    text-decoration: underline;
+}
+
+/* --- Liste d'Albums --- */
 .album-list {
     list-style: none;
     padding: 0;
@@ -63,18 +61,18 @@ footer {
     display: flex;
     align-items: center;
     padding: 15px 20px;
-    border-bottom: 1px solid #ffffff; /* Ligne très fine et sombre */
-    transition: background 0.3s;
+    border-bottom: 1px solid #ffffff;
+    transition: 0.3s;
+    cursor: pointer;
 }
 
 .album-item:hover {
-    background-color: #000000; /* Effet de survol discret */
+    background-color: #111;
 }
 
 .rank {
     width: 30px;
     font-size: 1.2em;
-    color: #ffffff;
     font-weight: bold;
 }
 
@@ -88,141 +86,45 @@ footer {
 
 .album-content {
     display: flex;
-    flex: 1; /* Prend tout l'espace restant */
-    justify-content: space-between; /* Espace le titre, l'artiste et les vues */
+    flex: 1;
+    justify-content: space-between;
     align-items: center;
 }
 
 .album-title {
     flex: 2;
     font-weight: bold;
-    font-size: 1em;
 }
 
-.album-title small {
-    font-size: 0.6em;
-    color: #ffffff;
-    margin-left: 5px;
-    border: 1px solid #ffffff;
-    padding: 1px 3px;
-}
-
-.album-artist {
+.album-artist,
+.album-stats {
     flex: 2;
-    color: #000000;
+    color: #ffffff;
     text-align: left;
 }
 
 .album-stats {
     flex: 1;
-    color: #000000;
     font-size: 0.8em;
     text-align: right;
 }
 
-.album-link {
-    text-decoration: none; /* Enlève le soulignement */
-    color: inherit;        /* Garde la couleur blanche/grise de ton texte */
-    display: flex;         /* Permet de garder l'alignement horizontal si besoin */
-    align-items: center;
-    width: 100%;
-}
-
-.album-link:hover .album-title {
-    text-decoration: underline; /* Optionnel : souligne le titre seulement au survol */
-}
-
 .album-price {
-    display: block; 
     font-weight: bold;
-    color: #ffffff; /* Assure le blanc pur */
     font-size: 1.1em;
-    text-align: right; /* Aligne le prix à droite */
-    margin-left: 20px; /* Ajoute un espace avec le nom de l'artiste */
+    margin-left: 20px;
 }
 
-
-.album-item:hover {
-    background-color: rgb(0, 0, 0); 
-    cursor: pointer;
-}
-
-
-
+/* --- Spécifique Accueil & Vidéo --- */
 body.accueil {
-  
-  background-image: url('./Image/Wallpaper2Indexà.png'); 
-  
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-color: #000;
+    background: url('./Image/Wallpaper2Indexà.png') center/cover no-repeat fixed #000;
 }
-
-.popup-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.85); /* Un peu plus sombre pour le focus */
-    z-index: 1000;
-    justify-content: center;
-    align-items: center;
-}
-
-.popup-content {
-    background-color: #111; /* Fond très sombre */
-    padding: 40px;
-    border-radius: 4px; /* Coins moins arrondis pour un look plus "éditorial" */
-    text-align: center;
-    border: 1px solid #ffffff;
-    max-width: 500px;
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
-}
-
-.popup-intro {
-    color: #ffffff;
-    font-style: italic;
-    line-height: 1.6;
-    margin-bottom: 25px;
-    font-size: 1.1em;
-}
-
-.popup-content h2 {
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
-}
-
-.popup-content button {
-    background-color: #ffffff;
-    color: #000000;
-    border: none;
-    padding: 12px 30px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.popup-content button:hover {
-    background-color: #cccccc;
-}
-
 
 .video-background {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     overflow: hidden;
-    z-index: -1; /* Place la vidéo derrière tout le contenu */
+    z-index: -1;
 }
 
 #bg-video {
@@ -231,8 +133,42 @@ body.accueil {
     left: 50%;
     min-width: 100%;
     min-height: 100%;
-    width: auto;
-    height: auto;
     transform: translate(-50%, -50%);
-    object-fit: cover; /* Assure que la vidéo couvre tout l'écran sans se déformer */
+    object-fit: cover;
+}
+
+/* --- Pop-up --- */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: #111;
+    padding: 40px;
+    border-radius: 4px;
+    text-align: center;
+    border: 1px solid #fff;
+    max-width: 500px;
+}
+
+.popup-intro {
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.popup-content button {
+    background: #fff;
+    color: #000;
+    border: none;
+    padding: 12px 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
 }

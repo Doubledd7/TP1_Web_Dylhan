@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <title>Accueil - Ma Boutique</title>
     <link rel="stylesheet" href="Style.css">
 </head>
+
 <body>
 
     <div id="welcome-popup" class="popup-overlay">
-    <div class="popup-content">
-        <h2>Bienvenue sur Ye Releases</h2>
-        <p class="popup-intro">Possédez un morceau d'histoire : plongez dans la discographie de Kanye West, là où le génie musical rencontre l'avant-garde.</p>
-        <button onclick="closePopup()">Découvrir la collection</button>
+        <div class="popup-content">
+            <h2>Bienvenue sur le site de vente Ye Releases</h2>
+            <p class="popup-intro"> Achetez un morceau d'histoire : plongez dans la musique de Kanye West, là où le
+                génie musical n'a pas de limite .</p>
+            <button onclick="closePopup()">Découvrir la collection</button>
+        </div>
+
+
+        <div class="video-background">
+            <video autoplay muted loop playsinline id="bg-video">
+                <source src="./Image/Netflix.mp4" type="video/mp4">
+
+            </video>
+        </div>
+
+
     </div>
-
-
-    <div class="video-background">
-    <video autoplay muted loop playsinline id="bg-video">
-        <source src="./Image/Netflix.mp4" type="video/mp4">
-       
-    </video>
-</div>
-
-
-</div>
     <header>
+
         <body class="accueil"></body>
         <div class="logo">La Boutique d'album de YE</div>
         <nav>
@@ -39,29 +43,30 @@
 
 
 
-          
+
         </section>
 
         <section>
-            
+
             <ul>
-               
+
             </ul>
         </section>
     </main>
 
 
     <script>
-    window.onload = function() {
-        document.getElementById('welcome-popup').style.display = 'flex';
-    };
+        window.onload = function () {
+            document.getElementById('welcome-popup').style.display = 'flex';
+        };
 
-    function closePopup() {
-        document.getElementById('welcome-popup').style.display = 'none';
-    }
-</script>
+        function closePopup() {
+            document.getElementById('welcome-popup').style.display = 'none';
+        }
+    </script>
     <footer>
-   
+
     </footer>
 </body>
+
 </html>
