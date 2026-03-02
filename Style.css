@@ -1,29 +1,33 @@
 /* --- Base & Structure --- */
-html, body {
-  height: 100%;
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: #fff;
-  background-color: #0f0f0f; /* Fond sombre constant */
+html {
+  /* Assure que la couleur de fond couvre toute la hauteur du document */
+  background-color: #000000; 
 }
 
 body {
+  min-height: 100vh; /* Minimum 100% de la hauteur de l'écran */
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #ffffff;
   display: flex;
   flex-direction: column;
+  /* On applique le noir ici aussi et on le fixe */
+  background: #000000 fixed; 
 }
 
 main {
-  flex: 1;
-  max-width: 900px; 
-  margin: 40px auto; 
+  flex: 1; /* Pousse le footer vers le bas */
+  max-width: 950px; 
+  margin: 20px auto; 
   padding: 30px;
-  background: rgba(0,0,0,0.6);
-  border-radius: 15px;
+  background-color: #000000; /* On garde le main noir aussi */
+  border-radius: 8px;
 }
+
 
 /* --- Navigation & Liens --- */
 a {
-  color: #3ea6ff; /* Bleu style YouTube pour une meilleure visibilité */
+  color: #ffd000; /* Bleu style YouTube pour une meilleure visibilité */
   text-decoration: none;
 }
 
@@ -57,18 +61,18 @@ footer {
     display: flex;
     align-items: center;
     padding: 15px 20px;
-    border-bottom: 1px solid #222; /* Ligne très fine et sombre */
+    border-bottom: 1px solid #000000; /* Ligne très fine et sombre */
     transition: background 0.3s;
 }
 
 .album-item:hover {
-    background-color: #1a1a1a; /* Effet de survol discret */
+    background-color: #000000; /* Effet de survol discret */
 }
 
 .rank {
     width: 30px;
     font-size: 1.2em;
-    color: #888;
+    color: #ffde17;
     font-weight: bold;
 }
 
@@ -95,21 +99,35 @@ footer {
 
 .album-title small {
     font-size: 0.6em;
-    color: #555;
+    color: #ffde17;
     margin-left: 5px;
-    border: 1px solid #333;
+    border: 1px solid #ffde17;
     padding: 1px 3px;
 }
 
 .album-artist {
     flex: 2;
-    color: #eee;
+    color: #000000;
     text-align: left;
 }
 
 .album-stats {
     flex: 1;
-    color: #888;
+    color: #000000;
     font-size: 0.8em;
     text-align: right;
+}
+
+
+
+
+body.accueil {
+  
+  background-image: url('./Image/Wallpaper2Indexà.png'); 
+  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #000;
 }
