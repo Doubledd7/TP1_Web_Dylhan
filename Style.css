@@ -63,7 +63,7 @@ footer {
     display: flex;
     align-items: center;
     padding: 15px 20px;
-    border-bottom: 1px solid #000000; /* Ligne très fine et sombre */
+    border-bottom: 1px solid #ffffff; /* Ligne très fine et sombre */
     transition: background 0.3s;
 }
 
@@ -74,7 +74,7 @@ footer {
 .rank {
     width: 30px;
     font-size: 1.2em;
-    color: #ffde17;
+    color: #ffffff;
     font-weight: bold;
 }
 
@@ -101,9 +101,9 @@ footer {
 
 .album-title small {
     font-size: 0.6em;
-    color: #ffde17;
+    color: #ffffff;
     margin-left: 5px;
-    border: 1px solid #ffde17;
+    border: 1px solid #ffffff;
     padding: 1px 3px;
 }
 
@@ -132,6 +132,20 @@ footer {
     text-decoration: underline; /* Optionnel : souligne le titre seulement au survol */
 }
 
+.album-price {
+    display: block; 
+    font-weight: bold;
+    color: #ffffff; /* Assure le blanc pur */
+    font-size: 1.1em;
+    text-align: right; /* Aligne le prix à droite */
+    margin-left: 20px; /* Ajoute un espace avec le nom de l'artiste */
+}
+
+
+.album-item:hover {
+    background-color: rgb(0, 0, 0); 
+    cursor: pointer;
+}
 
 
 
