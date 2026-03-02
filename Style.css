@@ -20,9 +20,11 @@ main {
   max-width: 950px; 
   margin: 20px auto; 
   padding: 30px;
-  background-color: #000000; /* On garde le main noir aussi */
+  background-color: #ff925300; /* On garde le main noir aussi */
   border-radius: 8px;
+
 }
+
 
 
 /* --- Navigation & Liens --- */
@@ -116,6 +118,18 @@ footer {
     color: #000000;
     font-size: 0.8em;
     text-align: right;
+}
+
+.album-link {
+    text-decoration: none; /* Enlève le soulignement */
+    color: inherit;        /* Garde la couleur blanche/grise de ton texte */
+    display: flex;         /* Permet de garder l'alignement horizontal si besoin */
+    align-items: center;
+    width: 100%;
+}
+
+.album-link:hover .album-title {
+    text-decoration: underline; /* Optionnel : souligne le titre seulement au survol */
 }
 
 
